@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      double  gradosConvertidosF;
+      double  gradosConvertidosC;
+      int [] gradosC = {0, 100, 25, -10};
+      int [] gradosF = {32, 100, -40};
+      
+      for(int i = 0; i<4; i++)
+      {
+        gradosConvertidosF = (double)gradosC[i]*1.8 + 32;
+        System.out.println(gradosConvertidosF);
+      }
+      System.out.println();
+      
+      for(int i = 0; i<3; i++)
+      {
+        gradosConvertidosC = (double)(gradosF[i]-32)*5/9;
+        System.out.println(gradosConvertidosC);
+      }
+      System.out.println();
+      
+      double [] numeros = {40, 50, 60, 24, 66, 12, 98};
+      double promedio;
+      int acum = 0;
+      
+      for( int i=0; i<7; i++)
+      {
+        acum += numeros[i];
+        
+      }
+      
+      promedio = (double)acum/7;
+      System.out.println(" el promedio es "+promedio);
+      System.out.println();
+      
+      for (int i=0; i<7; i++)
+      {
+        if(numeros[i] > promedio)
+        {
+          System.out.println(numeros[i]+" esta por encima del promedio");
+        }
+        else{
+          System.out.println(numeros[i]+" esta por debajo del promedio");
+        }
+      }
+  }
+}
